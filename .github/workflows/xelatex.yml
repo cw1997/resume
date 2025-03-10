@@ -30,21 +30,12 @@ jobs:
         # xelatex -interaction=nonstopmode -output-directory=./dist main.tex
         mv ./dist/main.pdf ../resume-wei_chang.pdf
 
-    - name: Force update latest tag
-      run: |
-        pwd
-        git config user.name "Wei Chang"
-        git config user.email "changwei1006@gmail.com"
-        git tag -f latest
-        git push origin latest --force
+    - name: Upload PDF to Release
+      uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Upload PDF to Release
-      uses: softprops/action-gh-release@v1
       with:
         tag_name: latest
-        files: resume-wei_chang.pdf
-        overwrite: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        release_name: latest
+        draft: false
+        prerelease: false
