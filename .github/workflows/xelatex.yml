@@ -24,13 +24,12 @@ jobs:
 
     - name: Compile LaTeX with XeLaTeX
       run: |
-        pwd
         mkdir ./dist
         xelatex -interaction=nonstopmode -output-directory=./dist main.tex
         # Compile twice to ensure the correct cross-references
         # I disable it because the cross-references is not existed in this file
         # xelatex -interaction=nonstopmode -output-directory=./dist main.tex
-        mv ./dist/main.pdf ../resume-wei_chang.pdf
+        mv ./dist/main.pdf ./resume-wei_chang.pdf
 
     - name: Upload PDF to Release
       uses: softprops/action-gh-release@v2
