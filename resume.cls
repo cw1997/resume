@@ -11,6 +11,7 @@
 \setCJKmainfont{Noto Serif}
 \setCJKmainfont{Noto Serif CJK SC}
 \setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK TC}
 
 % set line height
 \linespread{1.25}
