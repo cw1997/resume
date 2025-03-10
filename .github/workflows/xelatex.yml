@@ -32,11 +32,9 @@ jobs:
         mv ./dist/main.pdf ../resume-wei_chang.pdf
 
     - name: Upload PDF to Release
-      uses: actions/create-release@v1
+      uses: softprops/action-gh-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: latest
-        release_name: latest
-        draft: false
-        prerelease: false
+        files: |
+          resume-wei_chang.pdf
