@@ -8,6 +8,7 @@ jobs:
   build-and-release:
     runs-on: ubuntu-latest
     container: texlive/texlive:latest-full
+    permissions: write-all
 
     steps:
     - name: Checkout repository
