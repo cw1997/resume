@@ -1,0 +1,48 @@
+name: Build LaTeX and Release PDF
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest-full
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: true # keep permission for adding tag
+
+    - name: Install fonts
+      run: |
+        apt update
+        apt install fonts-noto-cjk fonts-noto-cjk-extra
+
+    - name: Compile LaTeX with XeLaTeX
+      run: |
+        mkdir ./dist
+        xelatex -interaction=nonstopmode -output-directory=./dist main.tex
+        # Compile twice to ensure the correct cross-references
+        # I disable it because the cross-references is not existed in this file
+        # xelatex -interaction=nonstopmode -output-directory=./dist main.tex
+        mv ./dist/main.pdf resume_(wei_chang).pdf
+
+    - name: Force update latest tag
+      run: |
+        git config user.name "Wei Chang"
+        git config user.email "changwei1006@gmail.com"
+        git tag -f latest
+        git push origin latest --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload PDF to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: latest
+        files: resume_(wei_chang).pdf
+        overwrite: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
