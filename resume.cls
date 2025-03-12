@@ -50,7 +50,7 @@
 
 % clear header and footer
 \fancyhf{}
-\fancyhead[L]{\textcolor{gray}{Built by xeLaTeX}}
+\fancyhead[L]{\textcolor{gray}{Built by xeLaTeX at \today}}
 \fancyhead[C]{\textcolor{gray}{Wei Chang's resume}}
 \fancyhead[R]{\textcolor{gray}{https://github.com/cw1997/resume}}
 \fancyfoot[C]{\thepage}
