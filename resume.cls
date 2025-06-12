@@ -5,6 +5,17 @@
 % support show logo
 \usepackage{metalogo}
 
+% support contents
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    bookmarksopen=true,
+    pdfauthor={Wei Chang},
+    pdftitle={changwei-resume},
+    pdfcreator={XeLaTeX},
+}
+
 % loading fonts
 \RequirePackage{xeCJK}
 \RequirePackage{fontspec}
