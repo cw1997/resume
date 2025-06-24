@@ -4,6 +4,10 @@
 
 \documentclass{resume}
 
+\newcommand{\iconsection}[2]{
+  \section[\texorpdfstring{#2}{#2}]{\faIcon{#1}\quad #2}
+}
+
 \begin{document}
 % \pagenumbering{gobble} % suppress displaying page number
 \sloppy
@@ -13,11 +17,11 @@
 % be careful of _ in emaill address
 \contactInfo{WeChat/Telegram:changwei1006}{changwei1006@qq.com/gmail.com}{https://www.changwei.me}{} % {GitHub @cw1997}
 
-\section{\faIcon{user} 个人简介}
+\iconsection{user}{个人简介}
     本人是泛语言开发者；Node.js全栈工程师；从大三至今在两间公司实习长达5年；从初三学习编程至今长达13年；独自一人帮助学校开发并上架供全校数万师生使用的APP至GooglePlay和AppStore；同时掌握软硬件技术；熟悉原型图和UI设计工具；熟练撰写中英文产品说明文档和技术文档，习惯书写注释和语意清晰的git commit message；熟悉\LaTeX 和InDesign等排版技术；担任过台湾各类开源社群活动的志工以及学生会和社团干部；具备跨领域能力；具有大学助教和社团讲师经验(包括英文授课与实践教学)；能够使用英语进行基本书面交流和简单口语表达（TOEIC 575分)
     \newline \textbf{现待业中，接受任何工作地点，主要擅长Node.js相关技术栈的前后端开发，但是也熟悉其他技术和语言，接受岗位调剂}
 
-\section{\faIcon{wrench} 技术能力}
+\iconsection{wrench}{技术能力}
     \begin{itemize}
       \item \textbf{前端}: JavaScript/TypeScript, HTML/CSS(Sass, TailwindCSS，styled-component), React.js(Next.js, Gatsby,js), Vue.js(Nuxt), jQuery, Webpack, Gulp.js, Rollup, Vite, Turborepo
       \item \textbf{后端}: Node.js(Fastify, Nest.js, tRPC, Express.js, Koa.js), PHP(Laravel, ThinkPHP), Python(Flask, fastapi), Java(Spring系列框架), Go, C/C++(了解STL，Socket API等), Shell(Bash), 汇编语言(X86, ARM, RISC-V, MIPS)
@@ -27,7 +31,7 @@
       \item \textbf{安全}: 熟悉XSS, CSRF, SQL Injection，逻辑缺陷等安全漏洞的机制，擅长防御式编程。曾经给百度BSRC，Wooyun，360补天等漏洞平台提交过多个知名平台的重大安全漏洞（包括百度贴吧，百度网盘等产品）
     \end{itemize}
 
-\section{\faIcon{graduation-cap} 教育背景}
+\iconsection{graduation-cap}{教育背景}
     \datedsubsection{\textbf{台湾科技大学}|电子工程|\textit{在读硕士研究生}}{2021.9 \textasciitilde 2025.8}
         \ \textbf{光电半导体组}。主要研究基于PCB电路板，半导体元件和各种新型材料设计毫米波空间滤波器/天线。曾获校级奖学金
     \datedsubsection{\textbf{台湾科技大学}|电子工程|\textit{工学学士}}{2018.9 \textasciitilde 2021.8}
@@ -36,7 +40,7 @@
     \datedsubsection{\textbf{武汉船舶职业技术学院}| 软件技术| \textit{专科}}{2015.9 \textasciitilde 2018.8}
         \ \textbf{主要学习Java/PHP等Web前后端开发相关技术}。担任班级学习委员，负责班级助教工作。曾获校级奖学金
 
-\section{\faIcon{building} 实习经历}
+\iconsection{building}{实习经历}
     \datedsubsection{\textbf{PingCAP（北京平凯星辰科技发展有限公司）}| 前端开发}{北京，深圳，远程 | 2020 \textasciitilde 2024}
         \begin{itemize}
           \item https://tidb.net 从零开发TiDB中文社区官网，使用React.js和Next.js技术栈
@@ -50,7 +54,7 @@
           \item https://risingwave.com 开发RisingWave公司新版官网，从旧版WordPress迁移至React.js和Next.js技术栈
         \end{itemize}
 
-\section{\faIcon{list} 项目作品}
+\iconsection{list}{项目作品}
     \datedsubsection{\textbf{NTUST LIB}\textit{（跨平台APP）}}{https://library.ntust.edu.tw/p/405-1049-110462,c11171.php}
         \begin{itemize}
             \item \textbf{前端}基於React Native with Expo SDK開發，使用TypeScript程式語言。支援跨平台使用『iOS、Android 作業系統』，并且同时上架AppStore和GooglePlay，接入Firebase进行埋点分析，crash监控，接入Sentry收集日志
@@ -80,7 +84,7 @@
             \item \textbf{技术栈}:FPGA, SystemVerilogHDL, VerilogHDL, SDRAM, Quartus II, ModelSim
         \end{itemize}
 
-\section{\faIcon{history} 其它经历}
+\iconsection{history}{其它经历}
     \datedsubsection{\textbf{台湾科技大学}| 助教}{}
         \begin{itemize}
             \item 负责课程\textbf{<電子工程總整>}，教学内容包括\textbf{计算机网络TCP/IP协议栈，Raw Socket等基本概念与实作}
