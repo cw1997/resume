@@ -28,7 +28,7 @@ jobs:
         xelatex -interaction=nonstopmode -output-directory=./dist main.tex
         # Compile twice to ensure the correct cross-references and contents
         xelatex -interaction=nonstopmode -output-directory=./dist main.tex
-        mv ./dist/main.pdf ./resume-wei_chang.pdf
+        mv ./dist/main.pdf ./chang_wei-resume.pdf
 
     - name: Upload PDF to Release
       uses: softprops/action-gh-release@v2
@@ -38,4 +38,4 @@ jobs:
         name: latest
         tag_name: latest
         files: |
-          resume-wei_chang.pdf
+          chang_wei-resume.pdf

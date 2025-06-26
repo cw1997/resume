@@ -11,7 +11,7 @@
     colorlinks=true,
     linkcolor=blue,
     bookmarksopen=true,
-    pdfauthor={Wei Chang},
+    pdfauthor={Chang Wei},
     pdftitle={changwei-resume},
     pdfcreator={XeLaTeX},
 }
@@ -62,7 +62,7 @@
 % clear header and footer
 \fancyhf{}
 \fancyhead[L]{\textcolor{gray}{Built by xeLaTeX at \today}}
-\fancyhead[C]{\textcolor{gray}{Wei Chang's resume}}
+\fancyhead[C]{\textcolor{gray}{Chang Wei's resume}}
 \fancyhead[R]{\textcolor{gray}{https://github.com/cw1997/resume}}
 \fancyfoot[C]{\thepage}
 % \fancyfoot[L]{left content}
