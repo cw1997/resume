@@ -106,11 +106,15 @@
 \newcommand{\datedsection}[2]{%
     \section[#1]{#1 \hfill #2}%
 }
-\newcommand{\datedsubsection}[2]{%
-    \subsection[#1]{#1 \hfill #2}%
+
+\newcommand{\datedsection}[2]{
+    \section[#1]{#1 \hfill #2}
 }
-\newcommand{\datedline}[2]{%
-        {\par #1 \hfill #2 \par}%
+\newcommand{\datedsubsection}[2]{
+    \subsection[#1]{#1 \hfill \textcolor{gray}{#2}}
+}
+\newcommand{\datedline}[2]{
+        {\par #1 \hfill #2 \par}
 }
 
 \newcommand{\name}[1]{
@@ -120,10 +124,10 @@
 
 \newcommand{\contactInfo}[4]{
     \centerline{\sffamily\large{\ {#1} \textperiodcentered\ \ {#2}}
-    \ifthenelse{\isempty{#3}}%
+    \ifthenelse{\isempty{#3}}
     { } % if {#3} is empty
     {\textperiodcentered\ \ {#3} } % homepage, no space before \text...
-    \ifthenelse{\isempty{#4}}%
+    \ifthenelse{\isempty{#4}}
     { } % if {#3} is empty
     {\textperiodcentered\ \ {#4} }
     }
