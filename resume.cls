@@ -66,9 +66,9 @@
 
 % clear header and footer
 \fancyhf{}
-\fancyhead[L]{\textcolor{gray!75}{Built by xeLaTeX at \today}}
-\fancyhead[C]{\textcolor{gray}{Chang, Wei's resume 昌维 简历}}
-\fancyhead[R]{\textcolor{gray!75}{https://github.com/cw1997/resume}}
+\fancyhead[L]{\textcolor{gray!75}{\href{https://github.com/cw1997/resume/releases/tag/latest}{Built by xeLaTeX at \today}}}
+\fancyhead[C]{\textcolor{gray}{\href{https://github.com/cw1997/resume/releases/download/latest/changwei-resume.pdf}{Chang, Wei's resume 昌维 简历}}}
+\fancyhead[R]{\textcolor{gray!75}{\href{https://github.com/cw1997/resume}{https://github.com/cw1997/resume}}}
 \fancyfoot[C]{\textcolor{gray}{\thepage}/\textcolor{gray!75}{\pageref*{LastPage}}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headrule}{%
