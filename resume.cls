@@ -106,8 +106,8 @@
 {}
 \titlespacing*{\subsection}{0cm}{*1}{*0.5}
 
-\newcommand{\datedsection}[2]{%
-    \section[#1]{#1 \hfill #2}%
+\newcommand{\mytext}[1]{
+    \color{black!75}{#1}
 }
 
 \newcommand{\datedsection}[2]{
