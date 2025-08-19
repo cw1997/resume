@@ -8,8 +8,8 @@
 % support contents
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
+    hidelinks=true,
+    allcolors=blue,
     bookmarksopen=true,
     pdfauthor={Chang Wei},
     pdftitle={changwei-resume},
