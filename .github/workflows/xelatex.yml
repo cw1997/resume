@@ -30,6 +30,31 @@ jobs:
         xelatex -interaction=nonstopmode -output-directory=./dist main.tex
         mv ./dist/main.pdf ./changwei-resume.pdf
 
+    - name: Delete old 'latest' release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO: ${{ github.repository }}
+      run: |
+        echo "Fetching all releases..."
+        # fetch all release data
+        RELEASES=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/$REPO/releases")
+
+        apt install -y jq
+
+        # fetch latest release id
+        LATEST_ID=$(echo "$RELEASES" | jq -r '.[] | select(.tag_name=="latest") | .id')
+
+        if [ -n "$LATEST_ID" ]; then
+          echo "Deleting old 'latest' release (id: $LATEST_ID)..."
+          curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/$REPO/releases/$LATEST_ID"
+          echo "Old 'latest' release deleted."
+
+          # delete remote latest tag
+          git push origin --delete latest || true
+        else
+          echo "No old 'latest' release found."
+        fi
+
     - name: Upload PDF to Release
       uses: softprops/action-gh-release@v2
       env:
