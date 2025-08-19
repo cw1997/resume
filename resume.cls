@@ -49,7 +49,7 @@
 \RequirePackage{fontawesome5}
 
 % use xcolor for customizing color
-\RequirePackage[]{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 
 \RequirePackage{fancyhdr} % set Headers and Footers
 
