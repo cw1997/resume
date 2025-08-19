@@ -5,7 +5,10 @@
 % support show logo
 \usepackage{metalogo}
 
-% support contents
+% support dash underline
+\usepackage[normalem]{ulem}
+
+% support contents and hyper ref link
 \usepackage{hyperref}
 \hypersetup{
     hidelinks=true,
