@@ -1,14 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-# 创建字体链接到系统目录
-sudo mkdir -p /usr/share/fonts/custom
-sudo ln -sf "$PWD"/fonts/* /usr/share/fonts/custom/
+mkdir -p ./dist
+chmod 777 ./dist
 
-docker run --rm \
-  -v "$PWD":/workdir \
-  -w /workdir \
-  danteev/texlive \
-  bash -c "fc-cache -fv && latexmk -xelatex -synctex=1 -interaction=nonstopmode main.tex"
-
-# 清理权限
-sudo chown -R $(id -u):$(id -g) .
+xelatex -interaction=nonstopmode -output-directory=./dist main.tex
+# Compile twice to ensure the correct cross-references and contents
+xelatex -interaction=nonstopmode -output-directory=./dist main.tex

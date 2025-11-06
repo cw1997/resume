@@ -24,10 +24,7 @@ jobs:
 
     - name: Compile LaTeX with XeLaTeX
       run: |
-        mkdir ./dist
-        xelatex -interaction=nonstopmode -output-directory=./dist main.tex
-        # Compile twice to ensure the correct cross-references and contents
-        xelatex -interaction=nonstopmode -output-directory=./dist main.tex
+        sh ./build.sh
         mv ./dist/main.pdf ./changwei-resume.pdf
 
     - name: Mark repo directory as safe
