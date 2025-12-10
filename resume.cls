@@ -122,7 +122,7 @@
 }
 
 \newcommand{\name}[1]{
-  \centerline{\Huge\scshape{#1}}
+  \centerline{\huge\scshape{#1}}
   \vspace{1.2ex}
 }
 
