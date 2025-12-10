@@ -56,12 +56,14 @@
 \RequirePackage{lastpage} % get all pages number
 
 \RequirePackage[
-    a4paper,
-    left=0.5in,
-    right=0.5in,
-    top=0.75in,
-    bottom=0.75in,
-% noheada
+	a4paper,
+	left=0.5in,
+	right=0.5in,
+	top=0.5in,
+	bottom=0.5in,
+    headsep=14pt,
+    footskip=4pt,
+	% noheada
 ]{geometry}
 
 \pagestyle{fancy}  % enable fancyhdr
@@ -74,11 +76,11 @@
 \fancyfoot[C]{\textcolor{gray}{\thepage}/\textcolor{gray!75}{\pageref*{LastPage}}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headrule}{%
-    \color{gray!30}\hrule height 0.4pt width\headwidth \vskip-0.4pt
+  \color{gray!30}\hrule height 0.4pt width\headwidth \vskip-0.4pt
 }
 \renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\footrule}{%
-    \color{gray!30}\hrule height 0.4pt width\headwidth \vskip2pt
+  \color{gray!30}\hrule height 0.4pt width\headwidth \vskip2pt
 }
 % \fancyfoot[L]{left content}
 % \fancyfoot[R]{right content}
@@ -92,51 +94,51 @@
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command
-{\Large\scshape\raggedright} % Make the \section headers large (\Large),
-% small capitals (\scshape) and left aligned (\raggedright)
-{}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
-{}                           % Can be used to insert code before the heading
-[\titlerule]                 % Inserts a horizontal line after the heading
+  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+                               % small capitals (\scshape) and left aligned (\raggedright)
+  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
+  {}                           % Can be used to insert code before the heading
+  [\titlerule]                 % Inserts a horizontal line after the heading
 \titlespacing*{\section}{0cm}{*1}{*1}
 
 \titleformat{\subsection}
-{\large\raggedright}
-{}{0em}
-{}
+  {\large\raggedright}
+  {}{0em}
+  {}
 \titlespacing*{\subsection}{0cm}{*1}{*0.5}
 
 \newcommand{\mytext}[1]{
-    \color{black!75}{#1}
+  \color{black!75}{#1}
 }
 
 \newcommand{\datedsection}[2]{
-    \section[#1]{#1 \hfill #2}
+  \section[#1]{#1 \hfill #2}
 }
 \newcommand{\datedsubsection}[2]{
-    \subsection[#1]{#1 \hfill \textcolor{gray}{#2}}
+  \subsection[#1]{#1 \hfill \textcolor{gray}{#2}}
 }
 \newcommand{\datedline}[2]{
-        {\par #1 \hfill #2 \par}
+  {\par #1 \hfill #2 \par}
 }
 
 \newcommand{\name}[1]{
-    \centerline{\Huge\scshape{#1}}
-    \vspace{1.2ex}
+  \centerline{\Huge\scshape{#1}}
+  \vspace{1.2ex}
 }
 
 \newcommand{\contactInfo}[4]{
-    \centerline{\sffamily\large{\ {#1} \textperiodcentered\ \ {#2}}
+  \centerline{\sffamily\large{\ {#1} \textperiodcentered\ \ {#2}}
     \ifthenelse{\isempty{#3}}
-    { } % if {#3} is empty
-    {\textperiodcentered\ \ {#3} } % homepage, no space before \text...
+      { } % if {#3} is empty
+      {\textperiodcentered\ \ {#3} } % homepage, no space before \text...
     \ifthenelse{\isempty{#4}}
-    { } % if {#3} is empty
-    {\textperiodcentered\ \ {#4} }
-    }
-    \vspace{0.7ex}
+      { } % if {#3} is empty
+      {\textperiodcentered\ \ {#4} }
+  }
+  \vspace{0.7ex}
 }
 
 \newcommand{\role}[2]{
-        {\par \textit{#1} ~ #2 \par}
-    \vspace{0.5ex}
+  {\par \textit{#1} ~ #2 \par}
+  \vspace{0.5ex}
 }
