@@ -5,118 +5,196 @@
 \documentclass{resume}
 
 \newcommand{\iconsection}[2]{
-    \section[\texorpdfstring{#2}{#2}]{\faIcon{#1}\quad #2}
+  \section[\texorpdfstring{#2}{#2}]{\faIcon{#1}\quad #2}
 }
 
 \begin{document}
-    % \pagenumbering{gobble} % suppress displaying page number
-    \sloppy
+  % \pagenumbering{gobble} % suppress displaying page number
+  \sloppy
 
-    \name{Wei Chang (Chang, Wei)}
+  \name{Wei Chang (Chang, Wei)}
 
-    % be careful of _ in emaill address
-    \contactInfo
-    {\href{https://www.changwei.me/_next/static/media/wechat_changwei1006.bb2a1d9a.jpg}{WeChat}/\href{https://t.me/changwei1006}{Telegram}:changwei1006}
-    {{changwei1006@}\href{mailto:changwei1006@qq.com}{qq.com}/\href{mailto:changwei1006@gmail.com}{gmail.com}}
+  % be careful of _ in emaill address
+  \contactInfo
+    {\href{https://www.changwei.me/_next/static/media/wechat_changwei1006.bb2a1d9a.jpg}{WeChat}/
+     \href{https://t.me/changwei1006}{Telegram}:changwei1006}
+    {{changwei1006@}\href{mailto:changwei1006@qq.com}{qq.com}/
+     \href{mailto:changwei1006@gmail.com}{gmail.com}}
     {\href{https://www.changwei.me}{https://www.changwei.me}}{}
 
-    \iconsection{user}{About Me}
-    I am a polyglot developer and a Node.js full-stack engineer. I have interned at two companies for 5 years since my junior year of college. I have been programming for 13 years since my third year of middle school. I single-handedly developed and published an app used by tens of thousands of students and faculty to Google Play and AppStore. Proficient in both software and hardware technologies; skilled in prototyping and UI design tools; experienced in writing product documentation and technical documents in both Chinese and English, with a habit of writing comments and clear, semantic git commit messages; familiar with typesetting technologies such as \LaTeX{} and InDesign. Served as a volunteer for various open-source community events in Taiwan, as well as student council and club officer. Possess cross-disciplinary abilities. Experienced as a university teaching assistant and club instructor (including English-taught and hands-on courses). Capable of basic written communication and simple oral expression in English (TOEIC 560).
+  \iconsection{user}{About Me}
+  I am a polyglot developer and a Node.js full-stack engineer.
+  I have interned at two companies for 5 years since my junior year of college.
+  I have been programming for 13 years since my third year of middle school.
+  I single-handedly developed and published an app used by tens of thousands of students and faculty to Google Play and AppStore.
+  Proficient in both software and hardware technologies; skilled in prototyping and UI design tools; experienced in writing product documentation and technical documents in both Chinese and English, with a habit of writing comments and clear, semantic git commit messages; familiar with typesetting technologies such as \LaTeX{} and InDesign.
+  Served as a volunteer for various open-source community events in Taiwan, as well as student council and club officer.
+  Possess cross-disciplinary abilities.
+  Experienced as a university teaching assistant and club instructor (including English-taught and hands-on courses).
+  Capable of basic written communication and simple oral expression in English (TOEIC 560).
 
-    \iconsection{wrench}{Technical Skills}
-        \begin{itemize}
-            \item \textbf{Frontend}: JavaScript/TypeScript, React.js(Next.js, Gatsby.js), HTML/CSS(Sass, TailwindCSS, styled-component), Vue.js(Nuxt), jQuery, Webpack, Gulp.js, Rollup, Vite, Turborepo
-            \item \textbf{Backend}: Node.js(Fastify, Nest.js, tRPC, Express.js, Koa.js), PHP(Laravel, ThinkPHP), Python(Flask, fastapi), Java(Spring framework family), Go, C/C++(STM, Socket API, etc.), Shell(Bash), Assembly(X86, ARM, RISC-V, MIPS)
-            \item \textbf{Database}: Postgres(PL/pgSQL), MySQL, SQLite, SQL Server, Redis, MongoDB, ElasticSearch
-            \item \textbf{DevOps}: Knowledge of Linux basic operations; experience with Proxmox VE/VMware ESXi virtualization platforms; familiar with Docker; interned in school computer room with hands-on experience operating data center equipment; familiar with public cloud platforms such as AWS, GCP, Alibaba Cloud, Tencent Cloud
-            \item \textbf{Networking}: Knowledge of OSI 7-layer model and TCP/IP protocol stack, network configuration, and protocol analysis using Wireshark
-            \item \textbf{Security}: Familiar with XSS, CSRF, SQL Injection, logic flaws and other security vulnerabilities; skilled in defensive programming. Have reported major security vulnerabilities of well-known platforms to Baidu BSRC, Wooyun, 360 Butian and other vulnerability disclosure platforms (including Baidu Tieba, Baidu Wangpan, etc.)
-        \end{itemize}
+  \iconsection{wrench}{Technical Skills}
+  \begin{itemize}
+    \item \textbf{Frontend}: JavaScript/TypeScript, React.js(Next.js, Gatsby.js), HTML/CSS(Sass, TailwindCSS, styled-component), Vue.js(Nuxt), jQuery, Webpack, Gulp.js, Rollup, Vite, Turborepo
+    \item \textbf{Backend}: Node.js(Fastify, Nest.js, tRPC, Express.js, Koa.js), PHP(Laravel, ThinkPHP), Python(Flask, fastapi), Java(Spring framework family), Go, C/C++(STM, Socket API, etc.), Shell(Bash), Assembly(X86, ARM, RISC-V, MIPS)
+    \item \textbf{Database}: Postgres(PL/pgSQL), MySQL, SQLite, SQL Server, Redis, MongoDB, ElasticSearch
+    \item \textbf{DevOps}: Knowledge of Linux basic operations; experience with Proxmox VE/VMware ESXi virtualization platforms; familiar with Docker; interned in school computer room with hands-on experience operating data center equipment; familiar with public cloud platforms such as AWS, GCP, Alibaba Cloud, Tencent Cloud
+    \item \textbf{Networking}: Knowledge of OSI 7-layer model and TCP/IP protocol stack, network configuration, and protocol analysis using Wireshark
+    \item \textbf{Security}: Familiar with XSS, CSRF, SQL Injection, logic flaws and other security vulnerabilities; skilled in defensive programming.
+      Have reported major security vulnerabilities of well-known platforms to Baidu BSRC, Wooyun, 360 Butian and other vulnerability disclosure platforms (including Baidu Tieba, Baidu Wangpan, etc.)
+  \end{itemize}
 
-    \iconsection{building}{Internship Experience}
+  \iconsection{building}{Internship Experience}
 
-    \datedsubsection{\textbf{RisingWave Labs} | Frontend Developer}{Remote | 2024/05 \textasciitilde 2025/02}
-        \begin{itemize}
-            \item Maintained the old company website, performed secondary development on the existing WordPress theme, and developed new WordPress plugins and templates
-            \item Developed the new company website at https://risingwave.com, migrated from the old WordPress stack to React.js and Next.js
-        \end{itemize}
+  \datedsubsection
+    {\textbf{RisingWave Labs} | Frontend Developer}
+    {Remote | 2024/05 \textasciitilde 2025/02}
+  \begin{itemize}
+    \item Maintained the old company website, performed secondary development on the existing WordPress theme, and developed new WordPress plugins and templates
+    \item Developed the new company website at https://risingwave.com, migrated from the old WordPress stack to React.js and Next.js
+  \end{itemize}
 
-    \datedsubsection{\textbf{PingCAP} | Frontend Developer}{Beijing, Shenzhen, Remote | 2020/10 \textasciitilde 2024/04}
-        \begin{itemize}
-            \item Built the TiDB Chinese community website at https://tidb.net from scratch using React.js and Next.js
-            \item Developed the new PingCAP company website at https://cn.pingcap.com, migrated from the old Hugo framework to React.js and Gatsby.js
-            \item Developed the company website at https://pingcap.cn from scratch using Next.js
-        \end{itemize}
+  \datedsubsection
+    {\textbf{PingCAP} | Frontend Developer}
+    {Beijing, Shenzhen, Remote | 2020/10 \textasciitilde 2024/04}
+  \begin{itemize}
+    \item Built the TiDB Chinese community website at https://tidb.net from scratch using React.js and Next.js
+    \item Developed the new PingCAP company website at https://cn.pingcap.com, migrated from the old Hugo framework to React.js and Gatsby.js
+    \item Developed the company website at https://pingcap.cn from scratch using Next.js
+  \end{itemize}
 
-    \iconsection{graduation-cap}{Education}
-        \datedsubsection{\textbf{National Taiwan Normal University (NTNU)} | Dept. of Education | \textit{Ph.D. in Education (in progress)}}{2025/09 \textasciitilde Present}
-            \begin{itemize}
-                \item Served as RA (Research Assistant), assisting professors in AI+Education research using Dify + Next.js technology stack
-            \end{itemize}
-        \datedsubsection{\textbf{National Taiwan University of Science and Technology (NTUST)} | Dept. of Electrical and Computer Engineering | \textit{M.S. in Engineering}}{2021/09 \textasciitilde 2025/08}
-            \begin{itemize}
-                \item \textbf{Optoelectronics and Semiconductor Group}. Researched millimeter-wave spatial filters/antennas based on PCB, semiconductor components, and novel materials. Awarded university scholarship.
-            \end{itemize}
-        \datedsubsection{\textbf{National Taiwan University of Science and Technology (NTNST)} | Dept. of Electrical and Computer Engineering | \textit{B.S. in Engineering}}{2018/09 \textasciitilde 2021/08}
-            \begin{itemize}
-                \item \textbf{Senior Project: RISC-V CPU on FPGA using VerilogHDL} (\textit{https://github.com/risc-v-cpu}).
-                Familiar with computer architecture, operating systems, computer networks, algorithms and data structures, databases, electronic circuits, MCU microcontrollers (STM32, Arduino, 8051), FPGA (SystemVerilogHDL), PCB design, SMT/THT soldering. Awarded Book Prize (ranked 1st in class).
-            \end{itemize}
-        \datedsubsection{\textbf{Wuhan Institute of Shipbuilding Technology} | Software Technology | \textit{Associate Degree}}{2015/09 \textasciitilde 2018/08}
-            \begin{itemize}
-                \item \textbf{Focused on Java/PHP and other Web frontend and backend development technologies}. Served as class academic representative and teaching assistant. Awarded university scholarship.
-            \end{itemize}
+  \iconsection{graduation-cap}{Education}
 
-    \iconsection{list}{Projects}
-        \datedsubsection{\textbf{NTUST LIB}\textit{ (Mobile App)}}{https://library.ntust.edu.tw/p/405-1049-110462,c11171.php?Lang=zh-tw}
-            \begin{itemize}
-                \item \textbf{Frontend} built with React Native and Expo SDK using TypeScript. Cross-platform support for iOS and Android, published on both AppStore and GooglePlay. Integrated Firebase for analytics and crash monitoring, Sentry for log collection.
-                \item \textbf{Backend} built with Nest.js using TypeScript. MySQL as database. Integrated Sentry for log collection.
-                \item \textbf{Tech Stack}: React, React Native, Expo, Node.js, JavaScript, TypeScript, GitHub, Git, GitHub Actions, Linux, Docker, Nest.js, MySQL, Firebase, Sentry
-            \end{itemize}
-        \datedsubsection{\textbf{ez-react}\textit{ (React.js Clone)}}{https://ez-react.changwei.me, https://github.com/cw1997/ez-react}
-            \begin{itemize}
-                \item Written in TypeScript. Cloned React.js with features and API closely resembling the official React after studying its internals.
-                \item \textbf{Tech Stack}: React, react-dom/client, JavaScript, TypeScript, Webpack
-            \end{itemize}
-        \datedsubsection{\textbf{ez-rtos}\textit{ (Embedded OS)}}{https://github.com/cw1997/ez-rtos}
-            \begin{itemize}
-                \item Real-time control OS implemented on STM32 microcontroller using ASM and C, designed for ARM Cortex-M3 core.
-                \item Supports common OS features including \textbf{task switching}, \textbf{delay}, \textbf{memory allocator}, \textbf{critical sections}.
-                \item \textbf{Tech Stack}: C, ARM, Assembly Language, Keil, STM32, Cortex-M3
-            \end{itemize}
-        \datedsubsection{\textbf{inetutils}\textit{ (Network Protocol Stack)}}{https://github.com/cw1997/inetutils}
-            \begin{itemize}
-                \item Cloned GNU inetutils in C. Implemented \texttt{ping} and \texttt{traceroute} by sending and receiving ICMP packets at the network layer.
-                \item \textbf{Tech Stack}: C, Socket API, GitHub Actions
-            \end{itemize}
-        \datedsubsection{\textbf{SDRAM Controller}}{https://github.com/cw1997/SDRAM-Controller}
-            \begin{itemize}
-                \item SDRAM memory controller written in SystemVerilogHDL. Capable of reading/writing SDRAM memory chips with correct timing and performing auto refresh to ensure data integrity.
-                \item Verified on Terasic DE2 (de2-35) FPGA development board with Altera Cyclone II EP2C35F672 chip.
-                \item \textbf{Tech Stack}: FPGA, SystemVerilogHDL, VerilogHDL, SDRAM, Quartus II, ModelSim
-            \end{itemize}
+  \datedsubsection
+    {\textbf{National Taiwan Normal University (NTNU)} | Dept. of Education |
+     \textit{Ph.D. in Education (in progress)}}
+    {2025/09 \textasciitilde Present}
+  \begin{itemize}
+    \item Served as RA (Research Assistant), assisting professors in AI+Education research using Dify + Next.js technology stack
+  \end{itemize}
 
-    \iconsection{history}{Other Experience}
-        \datedsubsection{\textbf{National Taiwan University of Science and Technology} | Teaching Assistant}{}
-            \begin{itemize}
-                \item Course: \textbf{<Electronics Capstone>}. Topics included \textbf{TCP/IP protocol stack, Raw Socket concepts and implementation}.
-                \item Course: \textbf{<Hybrid Cloud Platform Technology>}. Topics included \textbf{AWS cloud server configuration, S3 cloud storage, CDN, firewall, basic OS principles, Linux and Bash commands, installing and configuring web service components, deploying websites to the public internet}.
-            \end{itemize}
-        \datedsubsection{\textbf{Google Developer Group on Campus} | Instructor}{}
-            \begin{itemize}
-                \item \textbf{National Taiwan Normal University} campus instructor. Taught \textbf{React and Next.js frontend development and SQL/Postgres/Supabase database technologies} to club members.
-                \item \textbf{National Taiwan University of Science and Technology} campus instructor. Taught \textbf{frontend development and shared job-seeking experience}.
-                \item \textbf{National Taiwan University} campus instructor. Taught \textbf{SQL/Postgres/Supabase database and backend development technologies}.
-            \end{itemize}
-        \datedsubsection{\textbf{NTUST Student Association} | Officer}{}
-            \begin{itemize}
-                \item \textbf{Executive Branch}: Minister of Finance, \textbf{responsible for accounting and budget/final report preparation}. Member of Academic Rights Department, \textbf{assisted in distributing surveys and organizing campus concerts}.
-                \item \textbf{Legislative Branch (Student Parliament)}: Deputy Speaker, \textbf{responsible for assisting parliamentary meetings, reviewing the student association executive branch's budget and final reports, and auditing event implementation}.
-            \end{itemize}
-        \datedsubsection{\textbf{Wuhan Institute of Shipbuilding Technology New Media Center} | Member}{}
-            \begin{itemize}
-                \item Trained other members, \textbf{taught Adobe Premiere for video editing, assisted members in filming micro-movies, taught Photoshop and other design tools, assisted with WeChat public account and school official Weibo content layout and publishing}.
-            \end{itemize}
+  \datedsubsection
+    {\textbf{National Taiwan University of Science and Technology (NTUST)} |
+     Dept. of Electrical and Computer Engineering | \textit{M.S. in Engineering}}
+    {2021/09 \textasciitilde 2025/08}
+  \begin{itemize}
+    \item \textbf{Optoelectronics and Semiconductor Group}.
+      Researched millimeter-wave spatial filters/antennas based on PCB, semiconductor components, and novel materials.
+      Awarded university scholarship.
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{National Taiwan University of Science and Technology (NTNST)} |
+     Dept. of Electrical and Computer Engineering | \textit{B.S. in Engineering}}
+    {2018/09 \textasciitilde 2021/08}
+  \begin{itemize}
+    \item \textbf{Senior Project: RISC-V CPU on FPGA using VerilogHDL} (\textit{https://github.com/risc-v-cpu}).
+      Familiar with computer architecture, operating systems, computer networks, algorithms and data structures, databases, electronic circuits, MCU microcontrollers (STM32, Arduino, 8051), FPGA (SystemVerilogHDL), PCB design, SMT/THT soldering.
+      Awarded Book Prize (ranked 1st in class).
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{Wuhan Institute of Shipbuilding Technology} | Software Technology |
+     \textit{Associate Degree}}
+    {2015/09 \textasciitilde 2018/08}
+  \begin{itemize}
+    \item \textbf{Focused on Java/PHP and other Web frontend and backend development technologies}.
+      Served as class academic representative and teaching assistant.
+      Awarded university scholarship.
+  \end{itemize}
+
+  \iconsection{list}{Projects}
+
+  \datedsubsection
+    {\textbf{NTUST LIB}\textit{ (Mobile App)}}
+    {https://library.ntust.edu.tw/p/405-1049-110462,c11171.php?Lang=zh-tw}
+  \begin{itemize}
+    \item \textbf{Frontend} built with React Native and Expo SDK using TypeScript.
+      Cross-platform support for iOS and Android, published on both AppStore and GooglePlay.
+      Integrated Firebase for analytics and crash monitoring, Sentry for log collection.
+    \item \textbf{Backend} built with Nest.js using TypeScript.
+      MySQL as database.
+      Integrated Sentry for log collection.
+    \item \textbf{Tech Stack}: React, React Native, Expo, Node.js, JavaScript, TypeScript, GitHub, Git, GitHub Actions, Linux, Docker, Nest.js, MySQL, Firebase, Sentry
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{ez-react}\textit{ (React.js Clone)}}
+    {https://ez-react.changwei.me, https://github.com/cw1997/ez-react}
+  \begin{itemize}
+    \item Written in TypeScript.
+      Cloned React.js with features and API closely resembling the official React after studying its internals.
+    \item \textbf{Tech Stack}: React, react-dom/client, JavaScript, TypeScript, Webpack
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{ez-rtos}\textit{ (Embedded OS)}}
+    {https://github.com/cw1997/ez-rtos}
+  \begin{itemize}
+    \item Real-time control OS implemented on STM32 microcontroller using ASM and C, designed for ARM Cortex-M3 core.
+    \item Supports common OS features including \textbf{task switching}, \textbf{delay}, \textbf{memory allocator}, \textbf{critical sections}.
+    \item \textbf{Tech Stack}: C, ARM, Assembly Language, Keil, STM32, Cortex-M3
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{inetutils}\textit{ (Network Protocol Stack)}}
+    {https://github.com/cw1997/inetutils}
+  \begin{itemize}
+    \item Cloned GNU inetutils in C.
+      Implemented \texttt{ping} and \texttt{traceroute} by sending and receiving ICMP packets at the network layer.
+    \item \textbf{Tech Stack}: C, Socket API, GitHub Actions
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{SDRAM Controller}}
+    {https://github.com/cw1997/SDRAM-Controller}
+  \begin{itemize}
+    \item SDRAM memory controller written in SystemVerilogHDL.
+      Capable of reading/writing SDRAM memory chips with correct timing and performing auto refresh to ensure data integrity.
+    \item Verified on Terasic DE2 (de2-35) FPGA development board with Altera Cyclone II EP2C35F672 chip.
+    \item \textbf{Tech Stack}: FPGA, SystemVerilogHDL, VerilogHDL, SDRAM, Quartus II, ModelSim
+  \end{itemize}
+
+  \iconsection{history}{Other Experience}
+
+  \datedsubsection
+    {\textbf{National Taiwan University of Science and Technology} |
+     Teaching Assistant}
+    {}
+  \begin{itemize}
+    \item Course: \textbf{<Electronics Capstone>}.
+      Topics included \textbf{TCP/IP protocol stack, Raw Socket concepts and implementation}.
+    \item Course: \textbf{<Hybrid Cloud Platform Technology>}.
+      Topics included \textbf{AWS cloud server configuration, S3 cloud storage, CDN, firewall, basic OS principles, Linux and Bash commands, installing and configuring web service components, deploying websites to the public internet}.
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{Google Developer Group on Campus} | Instructor}
+    {}
+  \begin{itemize}
+    \item \textbf{National Taiwan Normal University} campus instructor.
+      Taught \textbf{React and Next.js frontend development and SQL/Postgres/Supabase database technologies} to club members.
+    \item \textbf{National Taiwan University of Science and Technology} campus instructor.
+      Taught \textbf{frontend development and shared job-seeking experience}.
+    \item \textbf{National Taiwan University} campus instructor.
+      Taught \textbf{SQL/Postgres/Supabase database and backend development technologies}.
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{NTUST Student Association} | Officer}
+    {}
+  \begin{itemize}
+    \item \textbf{Executive Branch}: Minister of Finance, \textbf{responsible for accounting and budget/final report preparation}.
+      Member of Academic Rights Department, \textbf{assisted in distributing surveys and organizing campus concerts}.
+    \item \textbf{Legislative Branch (Student Parliament)}: Deputy Speaker, \textbf{responsible for assisting parliamentary meetings, reviewing the student association executive branch's budget and final reports, and auditing event implementation}.
+  \end{itemize}
+
+  \datedsubsection
+    {\textbf{Wuhan Institute of Shipbuilding Technology New Media Center} |
+     Member}
+    {}
+  \begin{itemize}
+    \item Trained other members, \textbf{taught Adobe Premiere for video editing, assisted members in filming micro-movies, taught Photoshop and other design tools, assisted with WeChat public account and school official Weibo content layout and publishing}.
+  \end{itemize}
 
 \end{document}
