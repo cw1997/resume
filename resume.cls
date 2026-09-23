@@ -15,7 +15,7 @@
     allcolors=blue,
     pdfauthor={Chang,Wei},
     pdftitle={changwei-resume},
-    pdfsubject={Chang, Wei’s resume 昌维简历}
+    pdfsubject={Chang, Wei’s resume 昌维简历},
     pdfproducer={XeLaTeX},
     pdfcreator={XeLaTeX},
     bookmarks=true,
